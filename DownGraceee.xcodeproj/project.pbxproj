@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		5445AEC922754B6300C400DA /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
-		54D9D5642273EE1B001205B2 /* Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		54D9D5642273EE1B001205B2 /* DownGraceee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownGraceee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D9D5672273EE1B001205B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54D9D5692273EE1B001205B2 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		54D9D56C2273EE1B001205B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		54D9D5652273EE1B001205B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				54D9D5642273EE1B001205B2 /* Memo.app */,
+				54D9D5642273EE1B001205B2 /* DownGraceee.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		54D9D5632273EE1B001205B2 /* Memo */ = {
+		54D9D5632273EE1B001205B2 /* DownGraceee */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 54D9D5792273EE1D001205B2 /* Build configuration list for PBXNativeTarget "Memo" */;
+			buildConfigurationList = 54D9D5792273EE1D001205B2 /* Build configuration list for PBXNativeTarget "DownGraceee" */;
 			buildPhases = (
 				54D9D5602273EE1B001205B2 /* Sources */,
 				54D9D5612273EE1B001205B2 /* Frameworks */,
@@ -85,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = Memo;
+			name = DownGraceee;
 			productName = Memo;
-			productReference = 54D9D5642273EE1B001205B2 /* Memo.app */;
+			productReference = 54D9D5642273EE1B001205B2 /* DownGraceee.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -98,15 +98,16 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "Annie Do";
+				ORGANIZATIONNAME = "Learning Mobile App";
 				TargetAttributes = {
 					54D9D5632273EE1B001205B2 = {
 						CreatedOnToolsVersion = 10.2.1;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 54D9D55F2273EE1B001205B2 /* Build configuration list for PBXProject "Memo" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 54D9D55F2273EE1B001205B2 /* Build configuration list for PBXProject "DownGraceee" */;
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -118,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				54D9D5632273EE1B001205B2 /* Memo */,
+				54D9D5632273EE1B001205B2 /* DownGraceee */,
 			);
 		};
 /* End PBXProject section */
@@ -280,8 +281,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -293,10 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U3433753CR;
 				INFOPLIST_FILE = Memo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Annie-Do.Memo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -311,10 +308,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U3433753CR;
 				INFOPLIST_FILE = Memo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Annie-Do.Memo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -325,7 +319,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		54D9D55F2273EE1B001205B2 /* Build configuration list for PBXProject "Memo" */ = {
+		54D9D55F2273EE1B001205B2 /* Build configuration list for PBXProject "DownGraceee" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54D9D5772273EE1D001205B2 /* Debug */,
@@ -334,7 +328,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		54D9D5792273EE1D001205B2 /* Build configuration list for PBXNativeTarget "Memo" */ = {
+		54D9D5792273EE1D001205B2 /* Build configuration list for PBXNativeTarget "DownGraceee" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				54D9D57A2273EE1D001205B2 /* Debug */,
