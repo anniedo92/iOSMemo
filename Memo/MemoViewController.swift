@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 //the delegate pattern, so we can update the table view's selected item
 protocol MemoViewDelegate {
@@ -62,7 +63,7 @@ class MemoViewController: UIViewController, UITextViewDelegate {
         self.txtBody.resignFirstResponder()
         
         //makes the button invisible
-        self.btnDoneEditing.tintColor = UIColor.clear
+        //self.btnDoneEditing.tintColor = UIColor.clear
         
         //tell the main view controller that we're going to update the selected item
         //but only if the delegate is NOT nil
