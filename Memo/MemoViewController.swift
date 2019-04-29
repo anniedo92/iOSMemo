@@ -18,15 +18,12 @@ protocol MemoViewDelegate {
 class MemoViewController: UIViewController, UITextViewDelegate {
     //a variable to hold the delegate, so we can update the tableview
     var delegate : MemoViewDelegate?
-    
-    //a variable that links to the main bosy text view
-    @IBOutlet weak var txtBody: UITextView!
-    
-    //a variable to link the Done button
-    @IBOutlet weak var btnDoneEditing: UIBarButtonItem!
-    
     //a string variable to hold the body text
     var strBodyText: String!
+    
+    @IBOutlet weak var txtBody: UITextView!
+    @IBOutlet weak var btnDoneEditing: UIBarButtonItem!
+    @IBOutlet weak var scrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +42,11 @@ class MemoViewController: UIViewController, UITextViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.registerKeyboardNotifications()
+//    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -84,21 +86,55 @@ class MemoViewController: UIViewController, UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         //separate the body into multiple sections
         let components = self.txtBody.text.components(separatedBy:"\n")
-    
+
         //reset the title to blank (in case there are no components with valid text)
         self.navigationItem.title = ""
-    
+
         //loop through each item in the components array
         for item in components {
             //if the number of letters in the item is greater than 0...
             if item.rangeOfCharacter(from: CharacterSet.whitespacesAndNewlines.inverted) != nil {
-                
+
                 //then set the title to the item itself, and break out of the for loop
                     self.navigationItem.title = item
                 break
             }
         }
     }
+
+//    func registerKeyboardNotifications() {
+//        NotificationCenter.default.addObserver(self, selector:
+//            #selector(MemoViewController.keyboardDidShow(notification:)), name:
+//            UIResponder.keyboardDidShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector:
+//            #selector(MemoViewController.keyboardWillHide(notification:)), name:
+//            UIResponder.keyboardWillHideNotification, object: nil)
+//    }
+//
+//    func unregisterKeyboardNotifications() {
+//        NotificationCenter.default.removeObserver(self)
+//    }
+//
+//    @objc func keyboardDidShow(notification: NSNotification) {
+//        let userInfo: NSDictionary = notification.userInfo! as NSDictionary
+//        let keyboardInfo = userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue
+//        let keyboardSize = keyboardInfo.cgRectValue.size
+//
+//        // Get the existing contentInset for the scrollView and set the bottom property to be the height of the keyboard
+//        var contentInset = self.scrollView.contentInset
+//        contentInset.bottom = keyboardSize.height
+//
+//        self.scrollView.contentInset = contentInset
+//        self.scrollView.scrollIndicatorInsets = contentInset
+//    }
+//
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//        var contentInset = self.scrollView.contentInset
+//        contentInset.bottom = 0
+//
+//        self.scrollView.contentInset = contentInset
+//        self.scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
+//    }
 
 
     /*

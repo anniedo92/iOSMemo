@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54056CA222776D4600B3337D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54056CA122776D4600B3337D /* SettingViewController.swift */; };
 		5445AECA22754B6300C400DA /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5445AEC922754B6300C400DA /* MemoViewController.swift */; };
 		54D9D5682273EE1B001205B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9D5672273EE1B001205B2 /* AppDelegate.swift */; };
 		54D9D56A2273EE1B001205B2 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D9D5692273EE1B001205B2 /* TableViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54056CA122776D4600B3337D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5445AEC922754B6300C400DA /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		54D9D5642273EE1B001205B2 /* DownGraceee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownGraceee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D9D5672273EE1B001205B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				54D9D5672273EE1B001205B2 /* AppDelegate.swift */,
 				54D9D5692273EE1B001205B2 /* TableViewController.swift */,
 				5445AEC922754B6300C400DA /* MemoViewController.swift */,
+				54056CA122776D4600B3337D /* SettingViewController.swift */,
 				54D9D56B2273EE1B001205B2 /* Main.storyboard */,
 				54D9D5712273EE1D001205B2 /* Assets.xcassets */,
 				54D9D5732273EE1D001205B2 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54056CA222776D4600B3337D /* SettingViewController.swift in Sources */,
 				5445AECA22754B6300C400DA /* MemoViewController.swift in Sources */,
 				54D9D56A2273EE1B001205B2 /* TableViewController.swift in Sources */,
 				54D9D5702273EE1B001205B2 /* Memo.xcdatamodeld in Sources */,
@@ -293,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U3433753CR;
 				INFOPLIST_FILE = Memo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Annie-Do.Memo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -308,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U3433753CR;
 				INFOPLIST_FILE = Memo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Annie-Do.Memo";
 				PRODUCT_NAME = "$(TARGET_NAME)";

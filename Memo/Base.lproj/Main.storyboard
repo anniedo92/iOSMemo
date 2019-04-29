@@ -10,15 +10,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Memo View Controller-->
+        <!--Memo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MemoViewController" customModule="Memo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Memo" id="BYZ-38-t0r" customClass="MemoViewController" customModule="DownGraceee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cqh-cs-eRO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cqh-cs-eRO">
                                 <rect key="frame" x="0.0" y="155" width="414" height="707"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="2589.8550724637685" y="67.633928571428569"/>
         </scene>
-        <!--MEMO-->
+        <!--Table Memo-->
         <scene sceneID="Bma-i5-IXK">
             <objects>
-                <tableViewController id="bSC-DF-5Ao" sceneMemberID="viewController">
+                <tableViewController title="Table Memo" id="bSC-DF-5Ao" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FZP-so-Q6d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,6 +74,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="MEMO" id="yDZ-2R-Q1w">
+                        <barButtonItem key="leftBarButtonItem" title="Setting" image="Setting" landscapeImage="Setting" id="3s5-LV-X9h">
+                            <connections>
+                                <segue destination="PUO-Nv-9cY" kind="show" id="ub9-RO-Idl"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gnS-51-9QV">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="WAi-IF-Cxu"/>
@@ -87,6 +92,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ls-Io-nkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1828" y="68"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="Q2r-nz-lco">
+            <objects>
+                <viewController title="Setting" id="PUO-Nv-9cY" customClass="SettingViewController" customModule="DownGraceee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K6F-SN-H6O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sort Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40y-2v-Fe3">
+                                <rect key="frame" x="20" y="149" width="113" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sort Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtB-DC-DyZ">
+                                <rect key="frame" x="20" y="436" width="82" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ufn-Xb-MSk">
+                                <rect key="frame" x="0.0" y="508" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="578252671.00517499">
+                                    <!--2019-04-29 17:44:31 +0000-->
+                                </date>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SP2-Fk-QBm">
+                                <rect key="frame" x="0.0" y="217" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GeT-dJ-XOo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eDC-pE-7kP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1827.5362318840582" y="831.69642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xez-Y0-3Sf">
@@ -108,4 +155,7 @@
             <point key="canvasLocation" x="902.89855072463774" y="67.633928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Setting" width="30" height="30"/>
+    </resources>
 </document>
